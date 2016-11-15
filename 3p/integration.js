@@ -124,6 +124,7 @@ import {yieldone} from '../ads/yieldone';
 import {zedo} from '../ads/zedo';
 import {zergnet} from '../ads/zergnet';
 import {zucks} from '../ads/zucks';
+import {caameba} from '../ads/caameba';
 
 /**
  * Whether the embed type may be used with amp-embed tag.
@@ -239,6 +240,7 @@ register('zergnet', zergnet);
 register('yieldone', yieldone);
 register('zedo', zedo);
 register('zucks', zucks);
+register('caameba', caameba);
 
 // For backward compat, we always allow these types without the iframe
 // opting in.

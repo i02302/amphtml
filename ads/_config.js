@@ -515,4 +515,14 @@ export const adConfig = {
       'https://static.zucks.net.zimg.jp',
     ],
   },
+
+  caameba: {
+    prefetch: [
+      'https://cdn.amanad.adtdp.com/sdk/ajaamp-v1.0.js',
+    ],
+    preconnect: [
+      'https://ad.amanad.adtdp.com',
+    ],
+  },
+  
 };
