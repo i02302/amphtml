@@ -489,4 +489,14 @@ export const adConfig = {
       'https://static.zucks.net.zimg.jp',
     ],
   },
+
+  caglasgow: {
+    prefetch: [
+      'https://stg-cdn.amanad.adtdp.com/sdk/amn-v1.2.1.js',
+    ],
+    preconnect: [
+      'https://stg-ad.amanad.adtdp.com',
+    ],
+  },
+  
 };

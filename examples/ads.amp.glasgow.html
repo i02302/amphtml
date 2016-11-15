@@ -1,0 +1,228 @@
+<!doctype html>
+<html ⚡>
+<head>
+    <meta charset="utf-8">
+    <title>Ad examples</title>
+    <link rel="canonical" href="http://nonblocking.io/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .broken {
+            color: red;
+        }
+
+        amp-ad {
+            border: 1px solid #ccc;
+            max-width: 500px;
+        }
+
+        /* Included here to make sure it does not render. */
+        .fixed {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            background-color: #eee;
+            opacity: .8;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        amp-ad[type="revcontent"] {
+            width: 100%;
+            max-width: 1280px;
+            margin: 18px 0;
+            padding: 0;
+        }
+
+        amp-ad[type="nativo"] {
+            width: 100%;
+            max-width: 1280px;
+            margin: 18px 0;
+            padding: 0;
+            height: 100px;
+        }
+
+        amp-ad div[placeholder] {
+            background-color: lightgray;
+        }
+
+        amp-ad div[fallback] {
+            background-color: black;
+        }
+
+        amp-ad div[placeholder]::after {
+            content: "loading ...";
+        }
+
+        amp-ad div[fallback]::after {
+            content: "No ad";
+            color: white;
+        }
+
+        amp-ad div[placeholder]::after,
+        amp-ad div[fallback]::after {
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: calc(50% - 15px);
+        }
+    </style>
+    <script async custom-element="amp-ad" src="http://localhost:8000/dist/v0/amp-ad-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="http://localhost:8000/dist/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="http://localhost:8000/dist/v0/amp-carousel-0.1.js"></script>
+    <style amp-boilerplate>body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
+
+    @-webkit-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
+
+    @-moz-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
+
+    @-ms-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
+
+    @-o-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
+
+    @keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }</style>
+    <noscript>
+        <style amp-boilerplate>body {
+            -webkit-animation: none;
+            -moz-animation: none;
+            -ms-animation: none;
+            animation: none
+        }</style>
+    </noscript>
+    <script async src="http://localhost:8000/dist/v0.js"></script>
+
+</head>
+<body>
+<h2>Ad networks in <span class="broken">red color</span> have broken examples, please help to fix.</h2>
+<nav>
+    <!--
+        When adding new ad network to the list, please
+        1) verify that the ad slot loads ad. Check DEVELOPMENT.md for how to
+           run a local server.
+        2) keep the list in alphabetic order
+    -->
+    <a href="#amoad">AMoAd</a> |
+    <a href="#caprofitx">CA ProFit X</a> |
+    <a href="#microad">MicroAd</a> |
+    <a href="#caglasgow">CA Glasgow</a> |
+</nav>
+
+<h2 id="amoad">AMoAd banner</h2>
+<amp-ad width="300" height="250"
+        type="amoad"
+        data-ad-type="banner"
+        data-sid="62056d310111552c951d19c06bfa71e16e615e39493eceff667912488bc576a6">
+    <div placeholder></div>
+    <div fallback></div>
+</amp-ad>
+
+<h2>AMoAd native</h2>
+<amp-ad width="320" height="100"
+        type="amoad"
+        data-ad-type="native"
+        data-sid="62056d310111552c951d19c06bfa71e1bc19eea7e94d0a6e73e46a9402dbee47">
+    <div placeholder></div>
+    <div fallback></div>
+</amp-ad>
+
+<h2 id="caprofitx">CA ProFit-X</h2>
+<amp-ad
+        width="320"
+        height="50"
+        type="caprofitx"
+        data-tagid="17359">
+    <div placeholder></div>
+    <div fallback></div>
+</amp-ad>
+
+<h2 id="microad">MicroAd 320x50 banner</h2>
+<amp-ad width="320" height="50"
+        type="microad"
+        data-spot="b4bf837c5ddd69758d5ac924d04cf502"
+        data-url="${COMPASS_EXT_URL}"
+        data-referrer="${COMPASS_EXT_REF}"
+        data-ifa="${COMPASS_EXT_IFA}"
+        data-appid="${COMPASS_EXT_APPID}"
+        data-geo="${COMPASS_EXT_GEO}">
+    <div placeholder></div>
+    <div fallback></div>
+</amp-ad>
+
+<h2 id="caglasgow">CA Glasgow</h2>
+<amp-ad width="320" height="250" type="caglasgow" data-ad-spot="OvX1eLngcd0" data-count="2" data-test="true">
+    <div placeholder>glasgow infeed</div>
+    <div fallback></div>
+</amp-ad>
+<amp-carousel width="320" height="100" layout="responsive" type="slides" autoplay loop delay="5000">
+    <amp-ad width="320" height="100" type="caglasgow" data-ad-spot="OvX1eLngcd0" data-count="1" data-test="true">
+        <div placeholder>glasgow infeed</div>
+        <div fallback></div>
+    </amp-ad>
+    <amp-ad width="320" height="100" type="caglasgow" data-ad-spot="OvX1eLngcd0" data-count="1" data-test="true">
+        <div placeholder>glasgow infeed</div>
+        <div fallback></div>
+    </amp-ad>
+    <amp-ad width="320" height="100" type="caglasgow" data-ad-spot="OvX1eLngcd0" data-count="1" data-test="true">
+        <div placeholder>glasgow infeed</div>
+        <div fallback></div>
+    </amp-ad>
+    <amp-ad width="320" height="100" type="caglasgow" data-ad-spot="OvX1eLngcd0" data-count="1" data-test="true">
+        <div placeholder>glasgow infeed</div>
+        <div fallback></div>
+    </amp-ad>
+    <amp-ad width="320" height="100" type="caglasgow" data-ad-spot="OvX1eLngcd0" data-count="1" data-test="true">
+        <div placeholder>glasgow infeed</div>
+        <div fallback></div>
+    </amp-ad>
+    <amp-ad width="320" height="100" type="caglasgow" data-ad-spot="OvX1eLngcd0" data-count="1" data-test="true">
+        <div placeholder>glasgow infeed</div>
+        <div fallback></div>
+    </amp-ad>
+</amp-carousel>
+
+</body>
+</html>
